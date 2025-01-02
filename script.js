@@ -40,11 +40,22 @@ let chooseSquaresButton = document.querySelector('#chooseSquaresButton');
 chooseSquaresButton.addEventListener('click', (e)=>{
     e.preventDefault();
     let userNumberOfDivs = prompt('enter your desired number of squares per side');
-    // change the numbers of divs on the website to the user's desired number 
+    // ----------------Logic to Set the limit for the user input to a maximum of 100.-------------
+    if(userNumberOfDivs > 100){
+    // remove default 16 divs
+    divWrapper.innerHTML = ''
+    // create a p tag to display error message
+    let errorMessageDiv = document.createElement('p');
+    errorMessageDiv.textContent = 'You can only create between 1-100 number of squares per side' 
+    divWrapper.appendChild(errorMessageDiv)
+    }else{
+            // change the numbers of divs on the website to the user's desired number 
     numberOfSquareDivs = userNumberOfDivs ** 2
      // remove default 16 divs
      divWrapper.innerHTML = ''
     //  get numbers of divs per side given by the user through input
      divsPerSides = userNumberOfDivs
      setDivs(divsPerSides)
+    }
+
 }) 
