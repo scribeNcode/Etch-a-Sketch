@@ -15,7 +15,11 @@ function setDivs(sides){
             eachDivs.style.border = "1px solid red"
         // add eventlister to set background of div when mouser hover on it 
         eachDivs.addEventListener('mouseenter', ()=>{
-            eachDivs.style.backgroundColor = "red";
+            // gererate three random numbers each between 1-225 for rgb backgroundColor
+            let red = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+            eachDivs.style.backgroundColor = `rgb(${red},${green},${blue})`;
         });
     
             // add eventlister to remove  of div background when mouser leaves the div 
