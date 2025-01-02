@@ -13,3 +13,16 @@
     align-items: center;
 }
 
+.buttonDiv{
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonDiv button{
+    
+    height: 3rem;
+    width: 12rem;
+    border-radius: 5px;
+}
