@@ -5,27 +5,11 @@
 }
 
 .container{
-   
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; */
     width: 50vw;
     height: 80vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    
-}
-
-/* use flex-basis to ensure there are 16 divs in a row  using flex-basis and setting height to 16 too 
- using calc function column  */
-.container div{
-    flex-basis: calc(100% / 16  );
-    height: calc(100% / 16 );
-    border: 1px solid red;
 }
 
